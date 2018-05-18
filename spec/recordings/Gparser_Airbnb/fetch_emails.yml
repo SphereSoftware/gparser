@@ -1,0 +1,34 @@
+---
+Net::IMAP-authenticate-3bb7fb5ecd907c009df0ae78c92a585e: !ruby/object:Camcorder::Recording
+  value: !ruby/struct:Net::IMAP::TaggedResponse
+    tag: RUBY0001
+    name: OK
+    data: !ruby/struct:Net::IMAP::ResponseText
+      code: 
+      text: shemerey@gmail.com authenticated (Success)
+    raw_data: "RUBY0001 OK shemerey@gmail.com authenticated (Success)\r\n"
+  behavior: :return
+Net::IMAP-select-47a92255202cab5365604806f7acfc8e: !ruby/object:Camcorder::Recording
+  value: !ruby/struct:Net::IMAP::TaggedResponse
+    tag: RUBY0002
+    name: OK
+    data: !ruby/struct:Net::IMAP::ResponseText
+      code: !ruby/struct:Net::IMAP::ResponseCode
+        name: READ-WRITE
+        data: 
+      text: " INBOX selected. (Success)"
+    raw_data: "RUBY0002 OK [READ-WRITE] INBOX selected. (Success)\r\n"
+  behavior: :return
+Net::IMAP-uid_search-f5d18e0f56e775711cc0b0045b3b4b6f: !ruby/object:Camcorder::Recording
+  value:
+  - 106430
+  - 107592
+  - 107794
+  - 115302
+  - 118035
+  - 118225
+  - 118229
+  - 120424
+  - 120709
+  - 120782
+  behavior: :return

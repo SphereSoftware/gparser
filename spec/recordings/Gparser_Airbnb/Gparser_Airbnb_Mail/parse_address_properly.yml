@@ -1,0 +1,879 @@
+---
+Net::IMAP-authenticate-3bb7fb5ecd907c009df0ae78c92a585e: !ruby/object:Camcorder::Recording
+  value: !ruby/struct:Net::IMAP::TaggedResponse
+    tag: RUBY0001
+    name: OK
+    data: !ruby/struct:Net::IMAP::ResponseText
+      code: 
+      text: shemerey@gmail.com authenticated (Success)
+    raw_data: "RUBY0001 OK shemerey@gmail.com authenticated (Success)\r\n"
+  behavior: :return
+Net::IMAP-select-47a92255202cab5365604806f7acfc8e: !ruby/object:Camcorder::Recording
+  value: !ruby/struct:Net::IMAP::TaggedResponse
+    tag: RUBY0002
+    name: OK
+    data: !ruby/struct:Net::IMAP::ResponseText
+      code: !ruby/struct:Net::IMAP::ResponseCode
+        name: READ-WRITE
+        data: 
+      text: " INBOX selected. (Success)"
+    raw_data: "RUBY0002 OK [READ-WRITE] INBOX selected. (Success)\r\n"
+  behavior: :return
+Net::IMAP-uid_search-f5d18e0f56e775711cc0b0045b3b4b6f: !ruby/object:Camcorder::Recording
+  value:
+  - 106430
+  - 107592
+  - 107794
+  - 115302
+  - 118035
+  - 118225
+  - 118229
+  - 120424
+  - 120709
+  - 120782
+  behavior: :return
+Net::IMAP-select-400771da794fea624a23dfedd0941f2c: !ruby/object:Camcorder::Recording
+  value: !ruby/struct:Net::IMAP::TaggedResponse
+    tag: RUBY0004
+    name: OK
+    data: !ruby/struct:Net::IMAP::ResponseText
+      code: !ruby/struct:Net::IMAP::ResponseCode
+        name: READ-WRITE
+        data: 
+      text: " INBOX selected. (Success)"
+    raw_data: "RUBY0004 OK [READ-WRITE] INBOX selected. (Success)\r\n"
+  behavior: :return
+Net::IMAP-uid_fetch-f3ea4406ea62656e48b2f5f3f3fea2c7: !ruby/object:Camcorder::Recording
+  value:
+  - !ruby/struct:Net::IMAP::FetchData
+    seqno: 14658
+    attr:
+      X-GM-THRID: 1595623037126099537
+      X-GM-MSGID: 1595623037126099537
+      X-GM-LABELS: []
+      UID: 120782
+      FLAGS:
+      - :Seen
+      ENVELOPE: !ruby/struct:Net::IMAP::Envelope
+        date: Thu, 22 Mar 2018 07:45:08 +0000 (UTC)
+        subject: Reservation reminder - March 30, 2018
+        from:
+        - !ruby/struct:Net::IMAP::Address
+          name: Airbnb
+          route: 
+          mailbox: express
+          host: airbnb.com
+        sender:
+        - !ruby/struct:Net::IMAP::Address
+          name: Airbnb
+          route: 
+          mailbox: express
+          host: airbnb.com
+        reply_to:
+        - !ruby/struct:Net::IMAP::Address
+          name: Mark (Airbnb)
+          route: 
+          mailbox: 2qw0lqz9flf8g8jfrpck70120x2o
+          host: reply.airbnb.com
+        to:
+        - !ruby/struct:Net::IMAP::Address
+          name: 
+          route: 
+          mailbox: shemerey
+          host: gmail.com
+        cc: 
+        bcc: 
+        in_reply_to: 
+        message_id: "<3Qg8hjq2TKWkhI2_AbUcSA@ismtpd0004p1iad1.sendgrid.net>"
+      BODY[]: "Delivered-To: shemerey@gmail.com\r\nReceived: by 2002:a9d:501b:0:0:0:0:0
+        with SMTP id a27-v6csp614118oth;\r\n        Thu, 22 Mar 2018 00:45:09 -0700
+        (PDT)\r\nX-Google-Smtp-Source: AG47ELt4nEfS/ORKhchIkqBD7Avf2oL9FW8n4Kv+Xjk35wjKatNjaQBelaopkvgU1qwuBEolnB7k\r\nX-Received:
+        by 10.107.132.197 with SMTP id o66mr23881365ioi.119.1521704709225;\r\n        Thu,
+        22 Mar 2018 00:45:09 -0700 (PDT)\r\nARC-Seal: i=1; a=rsa-sha256; t=1521704709;
+        cv=none;\r\n        d=google.com; s=arc-20160816;\r\n        b=RZRPOnuOM8CmfNgfTGQBsqvrwE7wRRvCgR1P2wYRnyAVBktsMytnYNmi/dgRiK26lE\r\n
+        \        cRLYFgfIdO0SKfbzJ5rR5XSDQB+CLfOJuEO+hZUuAlHkZlF7nAhE9MJqLvzuvzXOAh1a\r\n
+        \        grb7WExtdIeXKikKZD/CcEjGSbknmwDen98V0jlHTChmDBnJtYFzx0/syR8F3OgJerOC\r\n
+        \        0TXXGpbs94VWuMqv+aQz5zuq6tY9pRApArnCxKFnvc1qXrqUosnfokBKF4dFKDptv1ZP\r\n
+        \        0tsPu+i48P5+D5pZ10wDL26oqqcYgxZy3HPe2SQK49JxGYOllKg/0zmraQWY6iRXcUZw\r\n
+        \        Duvg==\r\nARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=arc-20160816;\r\n        h=subject:message-id:to:reply-to:mime-version:from:date\r\n
+        \        :dkim-signature:dkim-signature:arc-authentication-results;\r\n        bh=m+QVZXA7xlSrn6TLgbkPSIBL8+38lidmSxQstFB6FFY=;\r\n
+        \       b=wq6ddzGdDCgIYbjEDBVZEzyMaGobi3BSZvMEVldEqb+ERAF6yOOU72+dMq8yiV+dtG\r\n
+        \        5IPb12BpYRxpRuilCZpzWdhtPEzCeAcjH7cL7raKeigOfHD1Ov5LJj6+P0UlmZAOEoXt\r\n
+        \        Zdhv6/prigJLl101tJr2nFPR7pF6zxgAts29zhsGatLItTeX7pN7HqJlNbjzYayW6BS3\r\n
+        \        7O1rmG6kjCD25ETGZV6CFIDs5OuanacPhrDoPWSLLwVzOsHrey8tBZnhqw1V0UAYVRIp\r\n
+        \        zn2JWsLVHeDqoHyAbLoDsbIhDmqVJazt5c8RNe/YnNYjyZlp3KFx/GTXKABeZSpixvNQ\r\n
+        \        d9yg==\r\nARC-Authentication-Results: i=1; mx.google.com;\r\n       dkim=pass
+        header.i=@email.airbnb.com header.s=s20150428 header.b=fyNIcQX4;\r\n       dkim=pass
+        header.i=@sendgrid.info header.s=smtpapi header.b=pkV+TIER;\r\n       spf=pass
+        (google.com: domain of bounces+168748-de1a-shemerey=gmail.com@email.airbnb.com
+        designates 50.31.32.19 as permitted sender) smtp.mailfrom=bounces+168748-de1a-shemerey=gmail.com@email.airbnb.com;\r\n
+        \      dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=airbnb.com\r\nReturn-Path:
+        <bounces+168748-de1a-shemerey=gmail.com@email.airbnb.com>\r\nReceived: from
+        o12.email.airbnb.com (o12.email.airbnb.com. [50.31.32.19])\r\n        by mx.google.com
+        with ESMTPS id j139-v6si4688193itj.116.2018.03.22.00.45.08\r\n        for
+        <shemerey@gmail.com>\r\n        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256
+        bits=128/128);\r\n        Thu, 22 Mar 2018 00:45:09 -0700 (PDT)\r\nReceived-SPF:
+        pass (google.com: domain of bounces+168748-de1a-shemerey=gmail.com@email.airbnb.com
+        designates 50.31.32.19 as permitted sender) client-ip=50.31.32.19;\r\nAuthentication-Results:
+        mx.google.com;\r\n       dkim=pass header.i=@email.airbnb.com header.s=s20150428
+        header.b=fyNIcQX4;\r\n       dkim=pass header.i=@sendgrid.info header.s=smtpapi
+        header.b=pkV+TIER;\r\n       spf=pass (google.com: domain of bounces+168748-de1a-shemerey=gmail.com@email.airbnb.com
+        designates 50.31.32.19 as permitted sender) smtp.mailfrom=bounces+168748-de1a-shemerey=gmail.com@email.airbnb.com;\r\n
+        \      dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=airbnb.com\r\nDKIM-Signature:
+        v=1; a=rsa-sha1; c=relaxed/relaxed; \r\n\td=email.airbnb.com; \r\n\th=content-type:from:mime-version:reply-to:to:subject;
+        \r\n\ts=s20150428; bh=Fm4SgZd8pHJ6NiL0ifNwoXulmBg=; b=fyNIcQX4Wb/muYls\r\n\tx26IpFB2SZkz7sdcwjAzB+4nJ7Q/O3BSj046DELFdJsCkAaKVYEiYqVMS5t1yIVU\r\n\tB6MeNoV83I4NHMQ+p5B5m64uMhCtB5BcKJyutQhqvKigyQ+CtQBL7GulZUo/uTFN\r\n\tAvCdLyTmM8gWoeAR8/IvqOPCfzM=\r\nDKIM-Signature:
+        v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; \r\n\th=content-type:from:mime-version:reply-to:to:subject:x-feedback-id;
+        \r\n\ts=smtpapi; bh=Fm4SgZd8pHJ6NiL0ifNwoXulmBg=; b=pkV+TIERepdM6JFxfH\r\n\tOvbxj/r8kDKQuTZuFCxRj1Y2yqobHmfH6jd+r1aGC1ZTIuwIhgmxO/VoMitS+tDM\r\n\tBY/K5RYo1TaMlea0kJfRVaFdVjEe15JsguyG4zdAGoq9VZGNn7+iPvl8U0q+Lt/Q\r\n\tPyamyVjG+pECUvFtB4H/49qmk=\r\nReceived:
+        by filter1248p1mdw1.sendgrid.net with SMTP id filter1248p1mdw1-26041-5AB35F04-D\r\n
+        \       2018-03-22 07:45:08.621428819 +0000 UTC\r\nReceived: from MTY4NzQ4
+        (ec2-34-201-137-138.compute-1.amazonaws.com [34.201.137.138])\r\n\tby ismtpd0004p1iad1.sendgrid.net
+        (SG) with HTTP id 3Qg8hjq2TKWkhI2_AbUcSA\r\n\tThu, 22 Mar 2018 07:45:08.630
+        +0000 (UTC)\r\nContent-Type: multipart/alternative; boundary=185f696327881a0d9634f73478c67ae522192212492b1a53d7e1f8ea4617\r\nDate:
+        Thu, 22 Mar 2018 07:45:08 +0000 (UTC)\r\nFrom: \"Airbnb\" <express@airbnb.com>\r\nMime-Version:
+        1.0\r\nReply-to: \"Mark (Airbnb)\" <2qw0lqz9flf8g8jfrpck70120x2o@reply.airbnb.com>\r\nTo:
+        shemerey@gmail.com\r\nMessage-ID: <3Qg8hjq2TKWkhI2_AbUcSA@ismtpd0004p1iad1.sendgrid.net>\r\nSubject:
+        Reservation reminder - March 30, 2018\r\nX-Message-Package-UUID: dc7226ac-9d3c-0862-7da6-51b91dc3a688\r\nX-User-ID:
+        36511193\r\nX-Template: reservation_mailer:reminder_guest_v2\r\nReturn-Path:
+        express@airbnb.com\r\nX-Strategy: \r\nX-Priority: \r\nX-Category: \r\nX-Locale:
+        en-GB\r\nX-SG-EID: hvy7fKDKEvImUKK8cd+tnViRe+9nCBh1BZJ/JZ09t1+HgioeClSXaJ+ROqK+TekI7G1bh0A5Qgj5l3\r\n
+        mLZsBV7DUGin7ktFzQnnLtLJSb3sJTi1oigt1F8tkqVP7kmzcEFemh5ap5NTxvRRCDH3WYv0Z4nCWK\r\n
+        ijUIzLOQkuZjOU2lxZO3w4sihDs6QWG5Mzv10uCgN+Vp7xlwWF2EMnYj1Q==\r\nX-SG-ID: mcTyqcYTtmn56LU3ATD1fwije5yYP8LqRLeIqeIKGyjsMPQeT0lialHNiBLLERSXGl8iNplBeiBUpQ\r\n
+        etdLlSdBcZ9/ujHFdFc9oNt4EZL83zYCtmmZvJdCqtXhcEcURYalWVFWd8qwLIYQo49pV628/tfWY7\r\n
+        V6o/95MamRnwevXHnOSBgiR/8Zs8Pdc/Qye4WBXlOFRxY8l2erpqSGy1yuglSidfYqqcN8+OBSKDoI\r\n
+        QVCOiXEWQ6Frv/msio8WYzU2fz+ZKtpDNHBUiGtbI06Jqsa8BdrsBo0rArRnv2OG8nZheuD+f4Xri8\r\n
+        QolIFt334ygyI168y+IS+40SfNhGQ2uZqJxvqYg9vmYaDCMgmShtW64LkmK0ffRgtuGy8sRXMMImTc\r\n
+        JXy8C0CKgehJ54Fg==\r\nX-Feedback-ID: 168748:v+WyYeHAgv5+GWh+WJmkBrDPxbXWHeY+jeJWzH6dUyY=:tnL8g4exlF1fcAdmdQNTKP+rGrJZFEutFjOiAoDaxAZr9WzUaoTaUi4LVf5B+fBx:SG\r\n\r\n--185f696327881a0d9634f73478c67ae522192212492b1a53d7e1f8ea4617\r\nContent-Transfer-Encoding:
+        quoted-printable\r\nContent-Type: text/plain; charset=UTF-8\r\nMime-Version:
+        1.0\r\n\r\nPack your bags!\r\nIt's almost time for your trip to Las Vegas.\r\n\r\nModern
+        amenities close to the strip!\r\nEntire home/apt hosted by Mark\r\nhttps://www.airbnb.com/rooms/21993561?eal_exp=3D1524296707&eal_sig=3D4b1dec=\r\nca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e278f&eal_uid=3D365111=\r\n93&eluid=3D0&euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\r\n\r\nAddress\r\n7315
+        Chrome Hill Street, Las Vegas, NV 89139, United States\r\nGet directions\r\nhttps://maps.google.com/maps?daddr=3D36.054981,-115.235992\r\n\r\nView
+        full itinerary\r\nhttps://www.airbnb.com/reservation/itinerary?code=3DHMJWARSKHK&eal_exp=3D15=\r\n24296707&eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b=\r\n3e0e278f&eal_uid=3D36511193&eluid=3D2&euid=3Ddc7226ac-9d3c-0862-7da6-51b91d=\r\nc3a688&server_side_login=3Dtrue&trip_token=3DBJA4P4W2&view_only=3Dtrue\r\n\r\nCheck-in
+        time is 3PM - 10PM\r\nFriday, Mar 30, 2018\r\nGet instructions\r\nhttps://www.airbnb.com/reservation/check-in-guide/21993561?eal_exp=3D152429=\r\n6707&eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e=\r\n278f&eal_uid=3D36511193&eluid=3D3&euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a6=\r\n88\r\n\r\nCheck
+        out 11AM\r\nThursday, Apr 05, 2018\r\n\r\nGuests\r\n3 adults, 1 child\r\n\r\nThis
+        listing has self check-in. Instructions on how to access will be visib=\r\nle
+        in the itinerary 3 days before checkin date.\r\n\r\nAmount\r\n$586.80\r\nView
+        receipt\r\nhttps://www.airbnb.com/reservation/receipt?code=3DHMJWARSKHK&eal_exp=3D1524=\r\n296707&eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e=\r\n0e278f&eal_uid=3D36511193&eluid=3D4&euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3=\r\na688\r\n\r\nReservation
+        code\r\nHMJWARSKHK\r\n\r\nChange reservation\r\nhttps://www.airbnb.com/reservation/change?code=3DHMJWARSKHK&eal_exp=3D15242=\r\n96707&eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0=\r\ne278f&eal_uid=3D36511193&eluid=3D5&email=3Dtrue&euid=3Ddc7226ac-9d3c-0862-7=\r\nda6-51b91dc3a688\r\n\r\nYour
+        host is here to help\r\nReach out to Mark with any questions you may have
+        about your stay.\r\nMessage Host\r\nhttps://www.airbnb.com/messaging/qt_for_reservation/HMJWARSKHK?eal_exp=3D15=\r\n24296707&eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b=\r\n3e0e278f&eal_uid=3D36511193&eluid=3D7&euid=3Ddc7226ac-9d3c-0862-7da6-51b91d=\r\nc3a688\r\n+1
+        (805) 208-0018\r\n\r\nKnow what to expect\r\nMake sure to review the house
+        rules and amenities.\r\nhttps://www.airbnb.com/reservation/itinerary?code=3DHMJWARSKHK&eal_exp=3D15=\r\n24296707&eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b=\r\n3e0e278f&eal_uid=3D36511193&eluid=3D8&euid=3Ddc7226ac-9d3c-0862-7da6-51b91d=\r\nc3a688\r\n\r\nVisit
+        Help Center\r\nhttps://www.airbnb.com/help?eal_exp=3D1524296707&eal_sig=3D4b1decca7a92449a=\r\n01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e278f&eal_uid=3D36511193&eluid=\r\n=3D11&euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\r\nContact
+        Airbnb\r\nhttps://www.airbnb.com/help/contact_us?eal_exp=3D1524296707&eal_sig=3D4b1de=\r\ncca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e278f&eal_uid=3D36511=\r\n193&eluid=3D12&euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688=\r\n\r\n--185f696327881a0d9634f73478c67ae522192212492b1a53d7e1f8ea4617\r\nContent-Transfer-Encoding:
+        quoted-printable\r\nContent-Type: text/html; charset=UTF-8\r\nMime-Version:
+        1.0\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org=\r\n/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html
+        xmlns=3D\"http://www.w3.org/1999/xhtml\" style=3D\"min-height:100%;backg=\r\nround:#f3f3f3\">\r\n
+        \ <head>\r\n    <meta http-equiv=3D\"Content-Type\" content=3D\"text/html;
+        charset=3DUTF-8=\r\n\">\r\n</head>\r\n<body style=3D\"font-size:16px;min-width:100%;-webkit-text-size-adjust:100%;=\r\n-ms-text-size-adjust:100%;-moz-box-sizing:border-box;-webkit-box-sizing:bor=\r\nder-box;box-sizing:border-box;font-family:'Circular',
+        Helvetica, Arial, san=\r\ns-serif;font-weight:normal;padding:0;margin:0;line-height:1.3;color:#0a0a0a=\r\n;text-align:left;width:100%
+        !important\">\r\n<div class=3D\"preheader\" style=3D\"mso-hide:all;visibility:hidden;opacity:0;=\r\ncolor:transparent;font-size:0px;width:0;height:0;display:none
+        !important\"><=\r\n/div>\r\n    <meta http-equiv=3D\"Content-Type\" content=3D\"text/html;
+        charset=3Dutf-8=\r\n\">\r\n    <meta name=3D\"viewport\" content=3D\"width=3Ddevice-width\">\r\n
+        \   <style data-roadie-ignore data-immutable=3D\"true\" type=3D\"text/css\">\r\n
+        \ @font-face {\r\n    font-family: 'Circular Black';\r\n    src: url(\"https://a0.muscache.com/airbnb/rookery/fonts/Circular-Air-Pro=\r\n-ExtraBlack-ab30a4ec2fa5ec7fa296e75df5cb2ad9.eot\");\r\n
+        \   src: url(\"https://a0.muscache.com/airbnb/rookery/fonts/Circular-Air-Pro=\r\n-ExtraBlack-ab30a4ec2fa5ec7fa296e75df5cb2ad9.eot?#\")
+        format(\"eot\"),\r\n      url(\"https://a1.muscache.com/airbnb/rookery/fonts/Circular-Air-Pro-Ex=\r\ntraBlack-6c7330bc572333f4258c6d546f7a1b1a.woff\")
+        format(\"woff\"),\r\n      url(\"https://a0.muscache.com/airbnb/rookery/fonts/Circular-Air-Pro-Ex=\r\ntraBlack-1a567149aaf7713739d485ea003a67b6.woff2\")
+        format(\"woff2\"),\r\n      url(\"https://a0.muscache.com/airbnb/rookery/fonts/Circular-Air-Pro-Ex=\r\ntraBlack-c10c36404923b10fc45cdf9098617c4a.ttf\")
+        format(\"truetype\"),\r\n      url(\"https://a0.muscache.com/airbnb/rookery/fonts/Circular-Air-Pro-Ex=\r\ntraBlack-22f8e76a70d586a3893d0afecd1accc0.svg\")
+        format(\"svg\");\r\n  }\r\n\r\n  @font-face {\r\n    font-family: 'Circular
+        Light';\r\n    src: url(\"https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Light-199f6f9d92c4f5f0cabe9ce7765467a9.woff2\")
+        format(\"woff2\");\r\n    font-weight: 200;\r\n    font-style: normal;\r\n
+        \ }\r\n\r\n  @font-face{\r\n    font-family: Circular;\r\n    src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Book-a952ee2c4bd292728a2439f767e3a260.eot\");\r\n
+        \   src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Book-1f5a0275bdd69dbbeadffab401c698a2.woff2\")
+        format(\"woff2\"),\r\n      url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_A=\r\nir-Book-7f15c543c7006815105f5df71824836d.woff\")
+        format(\"woff\"),\r\n      url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_A=\r\nir-Book-98e37c7514bb7096658cabbf6d43e783.svg\")
+        format(\"svg\");\r\n      font-weight: normal;\r\n      font-style: normal;\r\n
+        \ }\r\n\r\n  @font-face{\r\n    font-family: Circular;\r\n    src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot\");\r\n
+        \   src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Book_Italic-4909b413294f9048153d6dee23438b24.woff2\")
+        format(\"woff2\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Book_Italic-1db902f5b85bbb0964e2994434edbe16.woff\")
+        format(\"woff\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Book_Italic-0d9eb203b260869dc2470ae35162fc1e.svg\")
+        format(\"svg\");\r\n    font-weight: normal;\r\n    font-style: italic;\r\n
+        \ }\r\n\r\n  @font-face{\r\n    font-family: Circular;\r\n    src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Bold-c4da182b004982220ffd5caf5555cf2d.eot\");\r\n
+        \   src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Bold-7ceb09864a7ed03b9c10cfa2f7281315.woff2\")
+        format(\"woff2\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Bold-eacfa7beaa999351b4f89935e0126b19.woff\")
+        format(\"woff\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Bold-190e0f26359cdc7d8d093e1a04983ed3.svg\")
+        format(\"svg\");\r\n    font-weight: 700; font-style: normal;\r\n  }\r\n\r\n
+        \ @font-face{\r\n    font-family: Circular;\r\n    src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Light-3d9fa9ce4a6feb3bb7eab142470dd7d3.eot\");\r\n
+        \   src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Light-42f300daf805956564cdf1fcb56d2c6f.woff2\")
+        format(\"woff2\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Light-1cf016706a26eb4bf820dca2dca82c9f.woff\")
+        format(\"woff\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Light-ea56415eb35466568fd22e41c7352796.svg\")
+        format(\"svg\");\r\n    font-weight: 300;\r\n    font-style: normal;\r\n  }\r\n\r\n
+        \ @font-face{\r\n    font-family: Circular;\r\n    src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Light-3d9fa9ce4a6feb3bb7eab142470dd7d3.eot\");\r\n
+        \   src: url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circula=\r\nr_Air-Light-42f300daf805956564cdf1fcb56d2c6f.woff2\")
+        format(\"woff2\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Light-1cf016706a26eb4bf820dca2dca82c9f.woff\")
+        format(\"woff\"),\r\n    url(\"https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air=\r\n-Light-ea56415eb35466568fd22e41c7352796.svg\")
+        format(\"svg\");\r\n    font-weight: 200;\r\n    font-style: normal;\r\n  }\r\n</style>\r\n\r\n=20=20=20=20\r\n=20=20=20=20\r\n=20=20=20=20\r\n
+        \   <style data-roadie-ignore data-immutable=3D\"true\">\r\n      @media only
+        screen and (max-width: 460px) {\r\n        .small-float-center {\r\n          margin:
+        0 auto !important;\r\n          float: none !important;\r\n          text-align:
+        center !important; }\r\n        .small-text-center {\r\n          text-align:
+        center !important; }\r\n        .small-text-left {\r\n          text-align:
+        left !important; }\r\n        .small-text-right {\r\n          text-align:
+        right !important; } }\r\n\r\n        @media only screen and (max-width: 460px)
+        {\r\n          table.body table.container .hide-for-medium {\r\n            display:
+        block !important;\r\n            width: auto !important;\r\n            overflow:
+        visible !important;\r\n            max-height: none !important; } }\r\n\r\n
+        \     @media only screen and (max-width: 460px) {\r\n        table.body table.container
+        .row.hide-for-medium,\r\n        table.body table.container .row.hide-for-medium
+        {\r\n          display: table !important;\r\n          width: 100% !important;
+        } }\r\n\r\n      @media only screen and (max-width: 460px) {\r\n        table.body
+        table.container .show-for-medium {\r\n          display: none !important;\r\n
+        \         width: 0;\r\n          mso-hide: all;\r\n          overflow: hidden;
+        } }\r\n\r\n      @media only screen and (max-width: 596px) {\r\n        .small-float-center
+        {\r\n          margin: 0 auto !important;\r\n          float: none !important;\r\n
+        \         text-align: center !important; }\r\n        .small-text-center {\r\n
+        \         text-align: center !important; }\r\n        .small-text-left {\r\n
+        \         text-align: left !important; }\r\n        .small-text-right {\r\n
+        \         text-align: right !important; } }\r\n\r\n        @media only screen
+        and (max-width: 596px) {\r\n          table.body table.container .hide-for-large
+        {\r\n            display: block !important;\r\n            width: auto !important;\r\n
+        \           overflow: visible !important;\r\n            max-height: none
+        !important; } }\r\n\r\n      @media only screen and (max-width: 596px) {\r\n
+        \       table.body table.container .row.hide-for-large,\r\n        table.body
+        table.container .row.hide-for-large {\r\n          display: table !important;\r\n
+        \         width: 100% !important; } }\r\n\r\n      @media only screen and
+        (max-width: 596px) {\r\n        table.body table.container .show-for-large
+        {\r\n          display: none !important;\r\n          width: 0;\r\n          mso-hide:
+        all;\r\n          overflow: hidden; } }\r\n\r\n      @media only screen and
+        (max-width: 596px) {\r\n        table.body img {\r\n          width: auto
+        !important;\r\n          height: auto !important; }\r\n        table.body
+        center {\r\n          min-width: 0 !important; }\r\n        table.body .container
+        {\r\n          width: 95% !important; }\r\n        table.body .columns,\r\n
+        \       table.body .column {\r\n          height: auto !important;\r\n          -moz-box-sizing:
+        border-box;\r\n          -webkit-box-sizing: border-box;\r\n          box-sizing:
+        border-box;\r\n          padding-left: 16px !important;\r\n          padding-right:
+        16px !important; }\r\n          table.body .columns .column,\r\n          table.body
+        .columns .columns,\r\n          table.body .column .column,\r\n          table.body
+        .column .columns {\r\n            padding-left: 0 !important;\r\n            padding-right:
+        0 !important; }\r\n          table.body .columns .column.nested,\r\n          table.body
+        .columns .columns.nested,\r\n          table.body .column .column.nested,\r\n
+        \         table.body .column .columns.nested {\r\n            padding-left:
+        16px !important;\r\n            padding-right: 16px !important; }\r\n        table.body
+        .collapse .columns,\r\n        table.body .collapse .column {\r\n          padding-left:
+        0 !important;\r\n          padding-right: 0 !important; }\r\n        td.small-1,\r\n
+        \       th.small-1 {\r\n          display: inline-block !important;\r\n          width:
+        8.33333% !important; }\r\n        td.small-2,\r\n        th.small-2 {\r\n
+        \         display: inline-block !important;\r\n          width: 16.66667%
+        !important; }\r\n        td.small-3,\r\n        th.small-3 {\r\n          display:
+        inline-block !important;\r\n          width: 25% !important; }\r\n        td.small-4,\r\n
+        \       th.small-4 {\r\n          display: inline-block !important;\r\n          width:
+        33.33333% !important; }\r\n        td.small-5,\r\n        th.small-5 {\r\n
+        \         display: inline-block !important;\r\n          width: 41.66667%
+        !important; }\r\n        td.small-6,\r\n        th.small-6 {\r\n          display:
+        inline-block !important;\r\n          width: 50% !important; }\r\n        td.small-7,\r\n
+        \       th.small-7 {\r\n          display: inline-block !important;\r\n          width:
+        58.33333% !important; }\r\n        td.small-8,\r\n        th.small-8 {\r\n
+        \         display: inline-block !important;\r\n          width: 66.66667%
+        !important; }\r\n        td.small-9,\r\n        th.small-9 {\r\n          display:
+        inline-block !important;\r\n          width: 75% !important; }\r\n        td.small-10,\r\n
+        \       th.small-10 {\r\n          display: inline-block !important;\r\n          width:
+        83.33333% !important; }\r\n        td.small-11,\r\n        th.small-11 {\r\n
+        \         display: inline-block !important;\r\n          width: 91.66667%
+        !important; }\r\n        td.small-12,\r\n        th.small-12 {\r\n          display:
+        inline-block !important;\r\n          width: 100% !important; }\r\n        .columns
+        td.small-12,\r\n        .column td.small-12,\r\n        .columns th.small-12,\r\n
+        \       .column th.small-12 {\r\n          display: block !important;\r\n
+        \         width: 100% !important; }\r\n        .body .columns td.small-1,\r\n
+        \       .body .column td.small-1,\r\n        td.small-1 center,\r\n        .body
+        .columns th.small-1,\r\n        .body .column th.small-1,\r\n        th.small-1
+        center {\r\n          display: inline-block !important;\r\n          width:
+        8.33333% !important; }\r\n        .body .columns td.small-2,\r\n        .body
+        .column td.small-2,\r\n        td.small-2 center,\r\n        .body .columns
+        th.small-2,\r\n        .body .column th.small-2,\r\n        th.small-2 center
+        {\r\n          display: inline-block !important;\r\n          width: 16.66667%
+        !important; }\r\n        .body .columns td.small-3,\r\n        .body .column
+        td.small-3,\r\n        td.small-3 center,\r\n        .body .columns th.small-3,\r\n
+        \       .body .column th.small-3,\r\n        th.small-3 center {\r\n          display:
+        inline-block !important;\r\n          width: 25% !important; }\r\n        .body
+        .columns td.small-4,\r\n        .body .column td.small-4,\r\n        td.small-4
+        center,\r\n        .body .columns th.small-4,\r\n        .body .column th.small-4,\r\n
+        \       th.small-4 center {\r\n          display: inline-block !important;\r\n
+        \         width: 33.33333% !important; }\r\n        .body .columns td.small-5,\r\n
+        \       .body .column td.small-5,\r\n        td.small-5 center,\r\n        .body
+        .columns th.small-5,\r\n        .body .column th.small-5,\r\n        th.small-5
+        center {\r\n          display: inline-block !important;\r\n          width:
+        41.66667% !important; }\r\n        .body .columns td.small-6,\r\n        .body
+        .column td.small-6,\r\n        td.small-6 center,\r\n        .body .columns
+        th.small-6,\r\n        .body .column th.small-6,\r\n        th.small-6 center
+        {\r\n          display: inline-block !important;\r\n          width: 50% !important;
+        }\r\n        .body .columns td.small-7,\r\n        .body .column td.small-7,\r\n
+        \       td.small-7 center,\r\n        .body .columns th.small-7,\r\n        .body
+        .column th.small-7,\r\n        th.small-7 center {\r\n          display: inline-block
+        !important;\r\n          width: 58.33333% !important; }\r\n        .body .columns
+        td.small-8,\r\n        .body .column td.small-8,\r\n        td.small-8 center,\r\n
+        \       .body .columns th.small-8,\r\n        .body .column th.small-8,\r\n
+        \       th.small-8 center {\r\n          display: inline-block !important;\r\n
+        \         width: 66.66667% !important; }\r\n        .body .columns td.small-9,\r\n
+        \       .body .column td.small-9,\r\n        td.small-9 center,\r\n        .body
+        .columns th.small-9,\r\n        .body .column th.small-9,\r\n        th.small-9
+        center {\r\n          display: inline-block !important;\r\n          width:
+        75% !important; }\r\n        .body .columns td.small-10,\r\n        .body
+        .column td.small-10,\r\n        td.small-10 center,\r\n        .body .columns
+        th.small-10,\r\n        .body .column th.small-10,\r\n        th.small-10
+        center {\r\n          display: inline-block !important;\r\n          width:
+        83.33333% !important; }\r\n        .body .columns td.small-11,\r\n        .body
+        .column td.small-11,\r\n        td.small-11 center,\r\n        .body .columns
+        th.small-11,\r\n        .body .column th.small-11,\r\n        th.small-11
+        center {\r\n          display: inline-block !important;\r\n          width:
+        91.66667% !important; }\r\n        table.body td.small-offset-1,\r\n        table.body
+        th.small-offset-1 {\r\n          margin-left: 8.33333% !important;\r\n          Margin-left:
+        8.33333% !important; }\r\n        table.body td.small-offset-2,\r\n        table.body
+        th.small-offset-2 {\r\n          margin-left: 16.66667% !important;\r\n          Margin-left:
+        16.66667% !important; }\r\n        table.body td.small-offset-3,\r\n        table.body
+        th.small-offset-3 {\r\n          margin-left: 25% !important;\r\n          Margin-left:
+        25% !important; }\r\n        table.body td.small-offset-4,\r\n        table.body
+        th.small-offset-4 {\r\n          margin-left: 33.33333% !important;\r\n          Margin-left:
+        33.33333% !important; }\r\n        table.body td.small-offset-5,\r\n        table.body
+        th.small-offset-5 {\r\n          margin-left: 41.66667% !important;\r\n          Margin-left:
+        41.66667% !important; }\r\n        table.body td.small-offset-6,\r\n        table.body
+        th.small-offset-6 {\r\n          margin-left: 50% !important;\r\n          Margin-left:
+        50% !important; }\r\n        table.body td.small-offset-7,\r\n        table.body
+        th.small-offset-7 {\r\n          margin-left: 58.33333% !important;\r\n          Margin-left:
+        58.33333% !important; }\r\n        table.body td.small-offset-8,\r\n        table.body
+        th.small-offset-8 {\r\n          margin-left: 66.66667% !important;\r\n          Margin-left:
+        66.66667% !important; }\r\n        table.body td.small-offset-9,\r\n        table.body
+        th.small-offset-9 {\r\n          margin-left: 75% !important;\r\n          Margin-left:
+        75% !important; }\r\n        table.body td.small-offset-10,\r\n        table.body
+        th.small-offset-10 {\r\n          margin-left: 83.33333% !important;\r\n          Margin-left:
+        83.33333% !important; }\r\n        table.body td.small-offset-11,\r\n        table.body
+        th.small-offset-11 {\r\n          margin-left: 91.66667% !important;\r\n          Margin-left:
+        91.66667% !important; }\r\n        table.body table.columns td.expander,\r\n
+        \       table.body table.columns th.expander {\r\n          display: none
+        !important; }\r\n        table.body .right-text-pad,\r\n        table.body
+        .text-pad-right {\r\n          padding-left: 10px !important; }\r\n        table.body
+        .left-text-pad,\r\n        table.body .text-pad-left {\r\n          padding-right:
+        10px !important; }\r\n        table.menu {\r\n          width: 100% !important;
+        }\r\n          table.menu td,\r\n          table.menu th {\r\n            width:
+        auto !important;\r\n            display: inline-block !important; }\r\n          table.menu.vertical
+        td,\r\n          table.menu.vertical th, table.menu.small-vertical td,\r\n
+        \         table.menu.small-vertical th {\r\n            display: block !important;
+        }\r\n        table.menu[align=3D\"center\"] {\r\n          width: auto !important;
+        }\r\n        table.button.expand {\r\n          width: 100% !important; }
+        }\r\n\r\n      @media only screen and (max-width: 460px) {\r\n        table.body
+        img {\r\n          width: auto !important;\r\n          height: auto !important;
+        }\r\n        table.body center {\r\n          min-width: 0 !important; }\r\n
+        \       table.body .container {\r\n          width: 95% !important; }\r\n
+        \       table.body .columns,\r\n        table.body .column {\r\n          height:
+        auto !important;\r\n          -moz-box-sizing: border-box;\r\n          -webkit-box-sizing:
+        border-box;\r\n          box-sizing: border-box;\r\n          padding-left:
+        16px !important;\r\n          padding-right: 16px !important; }\r\n          table.body
+        .columns .column,\r\n          table.body .columns .columns,\r\n          table.body
+        .column .column,\r\n          table.body .column .columns {\r\n            padding-left:
+        0 !important;\r\n            padding-right: 0 !important; }\r\n        table.body
+        .collapse .columns,\r\n        table.body .collapse .column {\r\n          padding-left:
+        0 !important;\r\n          padding-right: 0 !important; }\r\n        td.small-medium-1,\r\n
+        \       th.small-medium-1 {\r\n          display: inline-block !important;\r\n
+        \         width: 8.33333% !important; }\r\n        td.small-medium-2,\r\n
+        \       th.small-medium-2 {\r\n          display: inline-block !important;\r\n
+        \         width: 16.66667% !important; }\r\n        td.small-medium-3,\r\n
+        \       th.small-medium-3 {\r\n          display: inline-block !important;\r\n
+        \         width: 25% !important; }\r\n        td.small-medium-4,\r\n        th.small-medium-4
+        {\r\n          display: inline-block !important;\r\n          width: 33.33333%
+        !important; }\r\n        td.small-medium-5,\r\n        th.small-medium-5 {\r\n
+        \         display: inline-block !important;\r\n          width: 41.66667%
+        !important; }\r\n        td.small-medium-6,\r\n        th.small-medium-6 {\r\n
+        \         display: inline-block !important;\r\n          width: 50% !important;
+        }\r\n        td.small-medium-7,\r\n        th.small-medium-7 {\r\n          display:
+        inline-block !important;\r\n          width: 58.33333% !important; }\r\n        td.small-medium-8,\r\n
+        \       th.small-medium-8 {\r\n          display: inline-block !important;\r\n
+        \         width: 66.66667% !important; }\r\n        td.small-medium-9,\r\n
+        \       th.small-medium-9 {\r\n          display: inline-block !important;\r\n
+        \         width: 75% !important; }\r\n        td.small-medium-10,\r\n        th.small-medium-10
+        {\r\n          display: inline-block !important;\r\n          width: 83.33333%
+        !important; }\r\n        td.small-medium-11,\r\n        th.small-medium-11
+        {\r\n          display: inline-block !important;\r\n          width: 91.66667%
+        !important; }\r\n        td.small-medium-12,\r\n        th.small-medium-12
+        {\r\n          display: inline-block !important;\r\n          width: 100%
+        !important; }\r\n        .columns td.small-medium-12,\r\n        .column td.small-medium-12,\r\n
+        \       .columns th.small-medium-12,\r\n        .column th.small-medium-12
+        {\r\n          display: block !important;\r\n          width: 100% !important;
+        }\r\n        .body .columns td.small-medium-1,\r\n        .body .column td.small-medium-1,\r\n
+        \       td.small-medium-1 center,\r\n        .body .columns th.small-medium-1,\r\n
+        \       .body .column th.small-medium-1,\r\n        th.small-medium-1 center
+        {\r\n          display: inline-block !important;\r\n          width: 8.33333%
+        !important; }\r\n        .body .columns td.small-medium-2,\r\n        .body
+        .column td.small-medium-2,\r\n        td.small-medium-2 center,\r\n        .body
+        .columns th.small-medium-2,\r\n        .body .column th.small-medium-2,\r\n
+        \       th.small-medium-2 center {\r\n          display: inline-block !important;\r\n
+        \         width: 16.66667% !important; }\r\n        .body .columns td.small-medium-3,\r\n
+        \       .body .column td.small-medium-3,\r\n        td.small-medium-3 center,\r\n
+        \       .body .columns th.small-medium-3,\r\n        .body .column th.small-medium-3,\r\n
+        \       th.small-medium-3 center {\r\n          display: inline-block !important;\r\n
+        \         width: 25% !important; }\r\n        .body .columns td.small-medium-4,\r\n
+        \       .body .column td.small-medium-4,\r\n        td.small-medium-4 center,\r\n
+        \       .body .columns th.small-medium-4,\r\n        .body .column th.small-medium-4,\r\n
+        \       th.small-medium-4 center {\r\n          display: inline-block !important;\r\n
+        \         width: 33.33333% !important; }\r\n        .body .columns td.small-medium-5,\r\n
+        \       .body .column td.small-medium-5,\r\n        td.small-medium-5 center,\r\n
+        \       .body .columns th.small-medium-5,\r\n        .body .column th.small-medium-5,\r\n
+        \       th.small-medium-5 center {\r\n          display: inline-block !important;\r\n
+        \         width: 41.66667% !important; }\r\n        .body .columns td.small-medium-6,\r\n
+        \       .body .column td.small-medium-6,\r\n        td.small-medium-6 center,\r\n
+        \       .body .columns th.small-medium-6,\r\n        .body .column th.small-medium-6,\r\n
+        \       th.small-medium-6 center {\r\n          display: inline-block !important;\r\n
+        \         width: 50% !important; }\r\n        .body .columns td.small-medium-7,\r\n
+        \       .body .column td.small-medium-7,\r\n        td.small-medium-7 center,\r\n
+        \       .body .columns th.small-medium-7,\r\n        .body .column th.small-medium-7,\r\n
+        \       th.small-medium-7 center {\r\n          display: inline-block !important;\r\n
+        \         width: 58.33333% !important; }\r\n        .body .columns td.small-medium-8,\r\n
+        \       .body .column td.small-medium-8,\r\n        td.small-medium-8 center,\r\n
+        \       .body .columns th.small-medium-8,\r\n        .body .column th.small-medium-8,\r\n
+        \       th.small-medium-8 center {\r\n          display: inline-block !important;\r\n
+        \         width: 66.66667% !important; }\r\n        .body .columns td.small-medium-9,\r\n
+        \       .body .column td.small-medium-9,\r\n        td.small-medium-9 center,\r\n
+        \       .body .columns th.small-medium-9,\r\n        .body .column th.small-medium-9,\r\n
+        \       th.small-medium-9 center {\r\n          display: inline-block !important;\r\n
+        \         width: 75% !important; }\r\n        .body .columns td.small-medium-10,\r\n
+        \       .body .column td.small-medium-10,\r\n        td.small-medium-10 center,\r\n
+        \       .body .columns th.small-medium-10,\r\n        .body .column th.small-medium-10,\r\n
+        \       th.small-medium-10 center {\r\n          display: inline-block !important;\r\n
+        \         width: 83.33333% !important; }\r\n        .body .columns td.small-medium-11,\r\n
+        \       .body .column td.small-medium-11,\r\n        td.small-medium-11 center,\r\n
+        \       .body .columns th.small-medium-11,\r\n        .body .column th.small-medium-11,\r\n
+        \       th.small-medium-11 center {\r\n          display: inline-block !important;\r\n
+        \         width: 91.66667% !important; }\r\n        table.body td.small-medium-offset-1,\r\n
+        \       table.body th.small-medium-offset-1 {\r\n          margin-left: 8.33333%
+        !important;\r\n          Margin-left: 8.33333% !important; }\r\n        table.body
+        td.small-medium-offset-2,\r\n        table.body th.small-medium-offset-2 {\r\n
+        \         margin-left: 16.66667% !important;\r\n          Margin-left: 16.66667%
+        !important; }\r\n        table.body td.small-medium-offset-3,\r\n        table.body
+        th.small-medium-offset-3 {\r\n          margin-left: 25% !important;\r\n          Margin-left:
+        25% !important; }\r\n        table.body td.small-medium-offset-4,\r\n        table.body
+        th.small-medium-offset-4 {\r\n          margin-left: 33.33333% !important;\r\n
+        \         Margin-left: 33.33333% !important; }\r\n        table.body td.small-medium-offset-5,\r\n
+        \       table.body th.small-medium-offset-5 {\r\n          margin-left: 41.66667%
+        !important;\r\n          Margin-left: 41.66667% !important; }\r\n        table.body
+        td.small-medium-offset-6,\r\n        table.body th.small-medium-offset-6 {\r\n
+        \         margin-left: 50% !important;\r\n          Margin-left: 50% !important;
+        }\r\n        table.body td.small-medium-offset-7,\r\n        table.body th.small-medium-offset-7
+        {\r\n          margin-left: 58.33333% !important;\r\n          Margin-left:
+        58.33333% !important; }\r\n        table.body td.small-medium-offset-8,\r\n
+        \       table.body th.small-medium-offset-8 {\r\n          margin-left: 66.66667%
+        !important;\r\n          Margin-left: 66.66667% !important; }\r\n        table.body
+        td.small-medium-offset-9,\r\n        table.body th.small-medium-offset-9 {\r\n
+        \         margin-left: 75% !important;\r\n          Margin-left: 75% !important;
+        }\r\n        table.body td.small-medium-offset-10,\r\n        table.body th.small-medium-offset-10
+        {\r\n          margin-left: 83.33333% !important;\r\n          Margin-left:
+        83.33333% !important; }\r\n        table.body td.small-medium-offset-11,\r\n
+        \       table.body th.small-medium-offset-11 {\r\n          margin-left: 91.66667%
+        !important;\r\n          Margin-left: 91.66667% !important; }\r\n        table.body
+        table.columns td.expander,\r\n        table.body table.columns th.expander
+        {\r\n          display: none !important; }\r\n        table.body .right-text-pad,\r\n
+        \       table.body .text-pad-right {\r\n          padding-left: 10px !important;
+        }\r\n        table.body .left-text-pad,\r\n        table.body .text-pad-left
+        {\r\n          padding-right: 10px !important; }\r\n        table.menu {\r\n
+        \         width: 100% !important; }\r\n          table.menu td,\r\n          table.menu
+        th {\r\n            width: auto !important;\r\n            display: inline-block
+        !important; }\r\n          table.menu.vertical td,\r\n          table.menu.vertical
+        th, table.menu.small-medium-vertical td,\r\n          table.menu.small-medium-vertical
+        th {\r\n            display: block !important; }\r\n        table.menu[align=3D\"center\"]
+        {\r\n          width: auto !important; }\r\n        table.button.expand {\r\n
+        \         width: 100% !important; } }\r\n\r\n      @media only screen and
+        (max-width: 596px) {\r\n        .calendar-content {\r\n          padding:
+        0px !important;\r\n          width: 288px !important;\r\n        }\r\n\r\n
+        \       .not-available-day, .calendar-today, .available-day {\r\n          height:
+        40px !important;\r\n          width: 40px !important;\r\n        }\r\n\r\n
+        \       .day-label {\r\n          margin-left: 10% !important;\r\n          margin-top:
+        0% !important;\r\n          font-size: 15px;\r\n        }\r\n      }\r\n    </style>\r\n
+        \   <meta name=3D\"filler\" content=3D\"        _      _           _      \">\r\n
+        \   <meta name=3D\"filler\" content=3D\"       (_)    | |         | |     \">\r\n
+        \   <meta name=3D\"filler\" content=3D\"   __ _ _ _ __| |__  _ __ | |__   \">\r\n
+        \   <meta name=3D\"filler\" content=3D\"  / _' | | '__| '_ \\| '_ \\| '_ \\
+        \ \">\r\n    <meta name=3D\"filler\" content=3D\" | (_| | | |  | |_) | | |
+        | |_) | \">\r\n    <meta name=3D\"filler\" content=3D\"  \\__,_|_|_|  |_.__/|_|
+        |_|_.__/  \">\r\n    <meta name=3D\"filler\" content=3D\"                                  \">\r\n=20=20=20=20\r\n=20=20\r\n=20=20\r\n
+        \   <img class=3D\"tracking\" src=3D\"https://www.airbnb.com/tracking/pixel/em=\r\nail_opened/1521704707?rookery_uuid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\"
+        =\r\nstyle=3D\"outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;w=\r\nidth:auto;max-width:100%;clear:both;display:block;display:none\">\r\n<img
+        class=3D\"tracking\" src=3D\"https://pixel.monitor1.returnpath.net/pixel.=\r\ngif?r=3Dd18944536895e922f0e7423fe24e51aff6f2b008\"
+        width=3D\"1\" height=3D\"1\" =\r\nstyle=3D\"outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;w=\r\nidth:auto;max-width:100%;clear:both;display:block\">\r\n
+        \   <table class=3D\"body\" style=3D\"border-spacing:0;border-collapse:collaps=\r\ne;vertical-align:top;-webkit-hyphens:none;-moz-hyphens:none;hyphens:none;-m=\r\ns-hyphens:none;font-family:'Circular',
+        Helvetica, Arial, sans-serif;font-we=\r\night:normal;margin:0;text-align:left;font-size:16px;line-height:19px;backgr=\r\nound:#f3f3f3;padding:0;width:100%;height:100%;color:#0a0a0a;margin-bottom:0=\r\npx
+        !important;background-color: white\">\r\n      <tr style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \       <td class=3D\"center\" align=3D\"center\" valign=3D\"top\" style=3D\"font-=\r\nsize:16px;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphe=\r\nns:auto;vertical-align:top;text-align:left;line-height:1.3;color:#0a0a0a;fo=\r\nnt-family:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;margin:0;font-=\r\nweight:normal;border-collapse:collapse
+        !important\">\r\n          <center style=3D\"width:100%;min-width:580px\">\r\n
+        \           <!--[if mso]>\r\n              <table class=3D\"container\" width=3D\"580\">\r\n
+        \           <![endif]-->\r\n            <!--[if !mso]> <!-- -->\r\n              <table
+        class=3D\"container\" style=3D\"border-spacing:0;border-c=\r\nollapse:collapse;padding:0;vertical-align:top;background:#fefefe;width:580p=\r\nx;margin:0
+        auto;text-align:inherit;max-width:580px;\">\r\n            <!-- <![endif]-->\r\n
+        \             <tr style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \               <td style=3D\"font-size:16px;word-wrap:break-word;-webkit-hy=\r\nphens:auto;-moz-hyphens:auto;hyphens:auto;vertical-align:top;text-align:lef=\r\nt;line-height:1.3;color:#0a0a0a;font-family:'Circular',
+        Helvetica, Arial, s=\r\nans-serif;padding:0;margin:0;font-weight:normal;border-collapse:collapse
+        !i=\r\nmportant\">\r\n                  <div>\r\n<table class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <a href=3D\"https://www.airbnb.com?eal_exp=3D1524296707&amp;eal_sig=3D=\r\n4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e278f&amp;eal_ui=\r\nd=3D36511193&amp;eluid=3D13&amp;euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688=\r\n\"
+        style=3D\"font-family:'Circular', Helvetica, Arial, sans-serif;font-weight=\r\n:normal;padding:0;margin:0;text-align:left;line-height:1.3;color:#2199e8;te=\r\nxt-decoration:none\">\r\n<img
+        align=3D\"center\" alt=3D\"\" class=3D\"center standard-header\" height=3D\"3=\r\n0\"
+        src=3D\"https://a1.muscache.com/airbnb/rookery/dls/logo_standard_2x-c0ed1=\r\n450d18490825bc37dd6cb23e5c5.png\"
+        style=3D\"display:block;outline:none;text-d=\r\necoration:none;-ms-interpolation-mode:bicubic;width:auto;max-width:100%;cle=\r\nar:both;border:none;padding-top:48px;padding-bottom:16px;max-height:30px\">
+        =\r\n     </a>\r\n    </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div>\r\n<div
+        class=3D\"headline-body\" style=3D\"padding-bottom:24px\">\r\n  <table class=3D\"row\"
+        style=3D\"border-spacing:0;border-collapse:collapse;t=\r\next-align:left;vertical-align:top;padding:0;width:100%;position:relative;di=\r\nsplay:table\">\r\n
+        \   <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \     <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size=\r\n:16px;text-align:left;line-height:1.3;color:#0a0a0a;font-family:'Circular',=\r\n
+        Helvetica, Arial, sans-serif;font-weight:normal;padding:0;width:564px;marg=\r\nin:0
+        auto;padding-left:16px;padding-right:16px;padding-bottom:0px !importan=\r\nt\">\r\n
+        \       <p class=3D\"headline headline-lg heavy max-width-485\" style=3D'padd=\r\ning:0;margin:0;text-align:left;font-family:\"Circular\",
+        \"Helvetica\", Helveti=\r\nca, Arial, sans-serif;max-width:485px;font-weight:700;color:#484848;line-he=\r\night:1.3;word-break:normal;hyphens:none;-moz-hyphens:none;-webkit-hyphens:n=\r\none;font-size:32px;-ms-hyphens:none;padding-bottom:8px;margin-bottom:0
+        !imp=\r\nortant;'>\r\n          Pack your bags!\r\n        </p>\r\n      </th>\r\n
+        \   </tr>\r\n  </table>\r\n  <table class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;t=\r\next-align:left;vertical-align:top;padding:0;width:100%;position:relative;di=\r\nsplay:table\">\r\n
+        \   <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \     <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size=\r\n:16px;text-align:left;line-height:1.3;color:#0a0a0a;font-family:'Circular',=\r\n
+        Helvetica, Arial, sans-serif;font-weight:normal;padding:0;width:564px;marg=\r\nin:0
+        auto;padding-left:16px;padding-right:16px;padding-bottom:0px !importan=\r\nt\">\r\n
+        \       <p class=3D\"body  body-lg body-link-rausch light text-left   \" styl=\r\ne=3D\"font-family:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;margin:=\r\n0;line-height:1.4;font-weight:300;color:#484848;font-size:18px;hyphens:none=\r\n;-ms-hyphens:none;-webkit-hyphens:none;-moz-hyphens:none;text-align:left;ma=\r\nrgin-bottom:0px
+        !important;\">\r\n          It=E2=80=99s almost time for your trip to Las
+        Vegas.\r\n        </p>\r\n      </th>\r\n    </tr>\r\n  </table>\r\n</div>\r\n</div>\r\n<div
+        style=3D\"padding-bottom:8px\">\r\n<table class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <a href=3D\"https://www.airbnb.com/rooms/21993561?eal_exp=3D1524296707=\r\n&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e=\r\n278f&amp;eal_uid=3D36511193&amp;eluid=3D0&amp;euid=3Ddc7226ac-9d3c-0862-7da=\r\n6-51b91dc3a688\"
+        style=3D\"font-family:'Circular', Helvetica, Arial, sans-ser=\r\nif;font-weight:normal;padding:0;margin:0;text-align:left;line-height:1.3;co=\r\nlor:#2199e8;text-decoration:none\">\r\n
+        \       <img src=3D\"https://a0.muscache.com/im/pictures/2b745d93-faf5-4557-=\r\n9183-7f8d48170c19.jpg?aki_policy=3Dlarge\"
+        class=3D\"row-pad-bot-1\" style=3D\"=\r\ndisplay:block;outline:none;text-decoration:none;-ms-interpolation-mode:bicu=\r\nbic;width:auto;clear:both;max-width:100%;border:none;padding-bottom:8px
+        !im=\r\nportant\">\r\n      </a>\r\n    </th>\r\n  </tr>\r\n</table>\r\n<table
+        class=3D\"row guest-listing-card\" style=3D\"border-spacing:0;border-co=\r\nllapse:collapse;text-align:left;vertical-align:top;padding:0;width:100%;pos=\r\nition:relative;display:table\">\r\n
+        \ <tr style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n    <th
+        class=3D\"small-10 large-10 columns first guest-listing-card-text ro=\r\nw-pad-bot-3
+        valign-mid\" style=3D\"font-size:16px;text-align:left;line-height=\r\n:1.3;color:#0a0a0a;font-weight:normal;padding:0;font-family:'Circular',
+        Hel=\r\nvetica, Arial, sans-serif;vertical-align:middle;padding-right:8px;margin:0
+        =\r\nauto;padding-bottom:16px;width:467.33333px;padding-left:16px\">\r\n      <a
+        href=3D\"https://www.airbnb.com/rooms/21993561?eal_exp=3D1524296707=\r\n&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b3e0e=\r\n278f&amp;eal_uid=3D36511193&amp;eluid=3D0&amp;euid=3Ddc7226ac-9d3c-0862-7da=\r\n6-51b91dc3a688\"
+        class=3D\"subheadline\" style=3D\"font-weight:normal;padding:0=\r\n;margin:0;text-align:left;color:#2199e8;text-decoration:none;font-family:'C=\r\nircular',
+        Helvetica, Arial, sans-serif;font-size:18px;line-height:1.4\">\r\n        <p
+        class=3D\"headline\" style=3D'padding:0;text-align:left;margin:0;-=\r\nms-hyphens:none;word-break:normal;hyphens:none;-moz-hyphens:none;-webkit-hy=\r\nphens:none;color:#484848;font-weight:300;font-family:\"Circular\",
+        \"Helvetica=\r\n\", Helvetica, Arial, sans-serif;font-size:24px;line-height:1.3;margin-botto=\r\nm:0
+        !important'>\r\n          Modern amenities close to the strip!\r\n        </p>\r\n
+        \       <p class=3D\"midheadline\" style=3D'padding:0;margin:0;text-align:lef=\r\nt;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sans-serif;font-we=\r\night:300;color:#484848;line-height:1.4;font-size:18px;margin-bottom:0
+        !impo=\r\nrtant'>\r\n          Entire home/apt hosted by Mark\r\n        </p>\r\n
+        \     </a>\r\n    </th>\r\n    <th class=3D\"small-2 large-2 columns last\"
+        style=3D\"font-size:16px;text=\r\n-align:left;color:#0a0a0a;font-family:'Circular',
+        Helvetica, Arial, sans-se=\r\nrif;font-weight:normal;padding:0;line-height:1.3;width:80.66667px;padding-l=\r\neft:16px;margin:0
+        auto;padding-bottom:16px;padding-right:16px\">\r\n      <a href=3D\"https://www.airbnb.com/users/show/160592330?eal_exp=3D1524=\r\n296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff84=\r\n9b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D1&amp;euid=3Ddc7226ac-9d3c-08=\r\n62-7da6-51b91dc3a688\"
+        class=3D\"text-right\" style=3D\"font-family:'Circular',=\r\n Helvetica, Arial,
+        sans-serif;font-weight:normal;padding:0;margin:0;text-al=\r\nign:left;line-height:1.3;color:#2199e8;text-decoration:none\">\r\n
+        \       <img src=3D\"https://a0.muscache.com/im/pictures/user/787bac77-0dc0-=\r\n4868-8aee-4e1e93c7ca11.jpg?aki_policy=3Dprofile_x_medium\"
+        class=3D\"profile-=\r\nimg-sm float-right\" style=3D\"outline:none;text-decoration:none;-ms-interpol=\r\nation-mode:bicubic;display:block;clear:both;border:none;max-height:64px;max=\r\n-width:64px;height:64px;width:64px;border-radius:50%;float:right;text-align=\r\n:right\">\r\n
+        \     </a>\r\n    </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-top:8px;padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-7 large7 columns first\" style=3D\"font-size:16px;font-f=\r\namily:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;text-align:left;li=\r\nne-height:1.3;color:#0a0a0a;font-weight:normal;padding-bottom:16px;padding-=\r\nleft:16px;margin:0
+        auto\">\r\n    <p class=3D\" body-text-lg light row-pad-bot-1\" style=3D'padding:0;margi=\r\nn:0;text-align:left;font-size:24px;font-weight:300;font-family:\"Circular\",
+        =\r\n\"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;l=\r\nine-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n      Address\r\n    </p>\r\n
+        \   <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;padding:=\r\n0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sa=\r\nns-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;mar=\r\ngin-bottom:0px
+        !important'>\r\n      7315 Chrome Hill Street, Las Vegas, NV 89139, United
+        States\r\n    </p>\r\n  </th>\r\n  <th class=3D\"small-5 large-5 columns last
+        valign-mid\" style=3D\"font-size:=\r\n16px;text-align:left;line-height:1.3;color:#0a0a0a;font-family:'Circular',
+        =\r\nHelvetica, Arial, sans-serif;font-weight:normal;padding:0;vertical-align:mi=\r\nddle;width:225.66667px;padding-left:16px;margin:0
+        auto;padding-bottom:16px;=\r\npadding-right:16px\">\r\n    <a href=3D\"https://maps.google.com/maps?daddr=3D36.054981,-115.235992\"
+        =\r\nstyle=3D\"font-family:'Circular', Helvetica, Arial, sans-serif;font-weight:n=\r\normal;padding:0;margin:0;text-align:left;line-height:1.3;color:#2199e8;text=\r\n-decoration:none\">\r\n
+        \     <p class=3D\"body-text light color-rausch text-right\" style=3D'padding=\r\n:0;margin:0;word-break:normal;font-weight:300;font-family:\"Circular\",
+        \"Helv=\r\netica\", Helvetica, Arial, sans-serif;line-height:1.4;font-size:18px;text-al=\r\nign:right;color:#ff5a5f
+        !important;margin-bottom:0px !important'>\r\n        Get directions\r\n      </p>\r\n
+        \   </a>\r\n  </th>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:24px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n    <th
+        class=3D\"col-pad-left-2 col-pad-right-2\" style=3D\"color:#0a0a0a;fon=\r\nt-family:'Circular',
+        Helvetica, Arial, sans-serif;font-weight:normal;paddin=\r\ng:0;margin:0;text-align:left;font-size:16px;line-height:1.3;padding-left:16=\r\npx;padding-right:16px\">\r\n
+        \     <a href=3D\"https://www.airbnb.com/reservation/itinerary?code=3DHMJWAR=\r\nSKHK&amp;eal_exp=3D1524296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228=\r\nf08d5d34e38ee352b97ff849b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D2&amp;=\r\neuid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688&amp;server_side_login=3Dtrue&am=\r\np;trip_token=3DBJA4P4W2&amp;view_only=3Dtrue\"
+        class=3D\"btn-primary btn-lg b=\r\ntn-rausch\" style=3D\"font-family:'Circular',
+        Helvetica, Arial, sans-serif;fo=\r\nnt-weight:normal;margin:0;text-align:left;line-height:1.3;color:#2199e8;tex=\r\nt-decoration:none;background-color:#ff5a5f;-webkit-border-radius:4px;border=\r\n-radius:4px;padding:19px
+        24px 19px 24px;display:block;\">\r\n        <p class=3D\"text-center\" style=3D'font-weight:normal;padding:0;marg=\r\nin:0;text-align:center;color:white;font-family:\"Circular\",
+        \"Helvetica\", Hel=\r\nvetica, Arial, sans-serif;font-size:24px;line-height:32px;margin-bottom:0px=\r\n
+        !important;'>\r\n          View full itinerary\r\n        </p>\r\n      </a>\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-top:8px;padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-7 large7 columns first\" style=3D\"font-size:16px;font-f=\r\namily:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;text-align:left;li=\r\nne-height:1.3;color:#0a0a0a;font-weight:normal;padding-bottom:16px;padding-=\r\nleft:16px;margin:0
+        auto\">\r\n    <p class=3D\" body-text-lg light row-pad-bot-1\" style=3D'padding:0;margi=\r\nn:0;text-align:left;font-size:24px;font-weight:300;font-family:\"Circular\",
+        =\r\n\"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;l=\r\nine-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n      Check-in time is 3PM -
+        10PM\r\n    </p>\r\n    <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;padding:=\r\n0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sa=\r\nns-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;mar=\r\ngin-bottom:0px
+        !important'>\r\n      Friday, Mar 30, 2018\r\n    </p>\r\n  </th>\r\n  <th
+        class=3D\"small-5 large-5 columns last valign-mid\" style=3D\"font-size:=\r\n16px;text-align:left;line-height:1.3;color:#0a0a0a;font-family:'Circular',
+        =\r\nHelvetica, Arial, sans-serif;font-weight:normal;padding:0;vertical-align:mi=\r\nddle;width:225.66667px;padding-left:16px;margin:0
+        auto;padding-bottom:16px;=\r\npadding-right:16px\">\r\n    <a href=3D\"https://www.airbnb.com/reservation/check-in-guide/21993561?e=\r\nal_exp=3D1524296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e3=\r\n8ee352b97ff849b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D3&amp;euid=3Ddc7=\r\n226ac-9d3c-0862-7da6-51b91dc3a688\"
+        style=3D\"font-family:'Circular', Helveti=\r\nca, Arial, sans-serif;font-weight:normal;padding:0;margin:0;text-align:left=\r\n;line-height:1.3;color:#2199e8;text-decoration:none\">\r\n
+        \     <p class=3D\"body-text light color-rausch text-right\" style=3D'padding=\r\n:0;margin:0;word-break:normal;font-weight:300;font-family:\"Circular\",
+        \"Helv=\r\netica\", Helvetica, Arial, sans-serif;line-height:1.4;font-size:18px;text-al=\r\nign:right;color:#ff5a5f
+        !important;margin-bottom:0px !important'>\r\n        Get instructions\r\n
+        \     </p>\r\n    </a>\r\n  </th>\r\n</table>\r\n</div>\r\n<div>\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-top:8px;padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-12 large12 columns first\" style=3D\"font-size:16px;font=\r\n-family:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;text-align:left;=\r\nline-height:1.3;color:#0a0a0a;font-weight:normal;padding-bottom:16px;paddin=\r\ng-left:16px;margin:0
+        auto\">\r\n    <p class=3D\" body-text-lg light row-pad-bot-1\" style=3D'padding:0;margi=\r\nn:0;text-align:left;font-size:24px;font-weight:300;font-family:\"Circular\",
+        =\r\n\"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;l=\r\nine-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n      Check out 11AM\r\n    </p>\r\n
+        \   <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;padding:=\r\n0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sa=\r\nns-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;mar=\r\ngin-bottom:0px
+        !important'>\r\n      Thursday, Apr 05, 2018\r\n    </p>\r\n  </th>\r\n  <th
+        class=3D\"small-0 large-0 columns last valign-mid\" style=3D\"font-size:=\r\n16px;padding:0;font-weight:normal;font-family:'Circular',
+        Helvetica, Arial,=\r\n sans-serif;text-align:left;line-height:1.3;color:#0a0a0a;vertical-align:mi=\r\nddle;margin:0
+        auto;padding-bottom:16px;padding-left:16px;padding-right:16px=\r\n\">\r\n
+        \ </th>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-12 large12 columns first\" style=3D\"font-size:16px;font=\r\n-family:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;text-align:left;=\r\nline-height:1.3;color:#0a0a0a;font-weight:normal;padding-bottom:16px;paddin=\r\ng-left:16px;margin:0
+        auto\">\r\n    <p class=3D\" body-text-lg light row-pad-bot-1\" style=3D'padding:0;margi=\r\nn:0;text-align:left;font-size:24px;font-weight:300;font-family:\"Circular\",
+        =\r\n\"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;l=\r\nine-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n      Guests\r\n    </p>\r\n
+        \   <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;padding:=\r\n0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sa=\r\nns-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;mar=\r\ngin-bottom:0px
+        !important'>\r\n      3 adults, 1 child\r\n    </p>\r\n  </th>\r\n  <th class=3D\"small-0
+        large-0 columns last valign-mid\" style=3D\"font-size:=\r\n16px;padding:0;font-weight:normal;font-family:'Circular',
+        Helvetica, Arial,=\r\n sans-serif;text-align:left;line-height:1.3;color:#0a0a0a;vertical-align:mi=\r\nddle;margin:0
+        auto;padding-bottom:16px;padding-left:16px;padding-right:16px=\r\n\">\r\n
+        \ </th>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div>\r\n<table class=3D\"row\"
+        style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <p class=3D\"body  body-lg body-link-rausch light text-left   \" style=\r\n=3D\"font-family:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;margin:0=\r\n;line-height:1.4;font-weight:300;color:#484848;font-size:18px;hyphens:none;=\r\n-ms-hyphens:none;-webkit-hyphens:none;-moz-hyphens:none;text-align:left;mar=\r\ngin-bottom:0px
+        !important;\">\r\n        This listing has self check-in. Instructions on
+        how to access will =\r\nbe visible in the itinerary 3 days before checkin
+        date.\r\n      </p>\r\n    </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div>\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-top:8px;padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-7 large7 columns first\" style=3D\"font-size:16px;font-f=\r\namily:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;text-align:left;li=\r\nne-height:1.3;color:#0a0a0a;font-weight:normal;padding-bottom:16px;padding-=\r\nleft:16px;margin:0
+        auto\">\r\n    <p class=3D\" body-text-lg light row-pad-bot-1\" style=3D'padding:0;margi=\r\nn:0;text-align:left;font-size:24px;font-weight:300;font-family:\"Circular\",
+        =\r\n\"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;l=\r\nine-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n      Amount\r\n    </p>\r\n
+        \   <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;padding:=\r\n0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sa=\r\nns-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;mar=\r\ngin-bottom:0px
+        !important'>\r\n      $586.80\r\n    </p>\r\n  </th>\r\n  <th class=3D\"small-5
+        large-5 columns last valign-mid\" style=3D\"font-size:=\r\n16px;text-align:left;line-height:1.3;color:#0a0a0a;font-family:'Circular',
+        =\r\nHelvetica, Arial, sans-serif;font-weight:normal;padding:0;vertical-align:mi=\r\nddle;width:225.66667px;padding-left:16px;margin:0
+        auto;padding-bottom:16px;=\r\npadding-right:16px\">\r\n    <a href=3D\"https://www.airbnb.com/reservation/receipt?code=3DHMJWARSKHK=\r\n&amp;eal_exp=3D1524296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d=\r\n5d34e38ee352b97ff849b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D4&amp;euid=\r\n=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\"
+        style=3D\"font-family:'Circular', H=\r\nelvetica, Arial, sans-serif;font-weight:normal;padding:0;margin:0;text-alig=\r\nn:left;line-height:1.3;color:#2199e8;text-decoration:none\">\r\n
+        \     <p class=3D\"body-text light color-rausch text-right\" style=3D'padding=\r\n:0;margin:0;word-break:normal;font-weight:300;font-family:\"Circular\",
+        \"Helv=\r\netica\", Helvetica, Arial, sans-serif;line-height:1.4;font-size:18px;text-al=\r\nign:right;color:#ff5a5f
+        !important;margin-bottom:0px !important'>\r\n        View receipt\r\n      </p>\r\n
+        \   </a>\r\n  </th>\r\n</table>\r\n</div>\r\n<div>\r\n<table class=3D\"row\"
+        style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:8px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-7 large7 columns first\" style=3D\"font-size:16px;font-f=\r\namily:'Circular',
+        Helvetica, Arial, sans-serif;padding:0;text-align:left;li=\r\nne-height:1.3;color:#0a0a0a;font-weight:normal;padding-bottom:16px;padding-=\r\nleft:16px;margin:0
+        auto\">\r\n    <p class=3D\" body-text-lg light \" style=3D'margin:0;text-align:left;pad=\r\nding:0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Aria=\r\nl, sans-serif;color:#484848;word-break:normal;line-height:1.2;font-size:24p=\r\nx;margin-bottom:0px
+        !important'>\r\n      Reservation code\r\n    </p>\r\n  </th>\r\n  <th class=3D\"small-5
+        large-5 columns last valign-mid\" style=3D\"font-size:=\r\n16px;text-align:left;line-height:1.3;color:#0a0a0a;font-family:'Circular',
+        =\r\nHelvetica, Arial, sans-serif;font-weight:normal;padding:0;vertical-align:mi=\r\nddle;width:225.66667px;padding-left:16px;margin:0
+        auto;padding-bottom:16px;=\r\npadding-right:16px\">\r\n    <p class=3D\" body-text
+        light text-right\" style=3D'padding:0;margin:0;fo=\r\nnt-size:18px;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica=\r\n, Arial, sans-serif;color:#484848;word-break:normal;line-height:1.4;text-al=\r\nign:right;margin-bottom:0px
+        !important'>\r\n      HMJWARSKHK\r\n    </p>\r\n  </th>\r\n</table>\r\n</div>\r\n<div
+        style=3D\"padding-bottom:8px\">\r\n<table class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"full-divider\" style=3D\"clear:both;max-width:580px;border=\r\n-right:0;border-top:0;border-left:0;margin:20px
+        auto;border-bottom:1px soli=\r\nd #cacaca;background-color:#dbdbdb;height:1px;border:none;width:100%;margin=\r\n-top:0;margin-bottom:0\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:32px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n    <th
+        class=3D\"col-pad-left-2 col-pad-right-2\" style=3D\"color:#0a0a0a;fon=\r\nt-family:'Circular',
+        Helvetica, Arial, sans-serif;font-weight:normal;paddin=\r\ng:0;margin:0;text-align:left;font-size:16px;line-height:1.3;padding-left:16=\r\npx;padding-right:16px\">\r\n
+        \     <a href=3D\"https://www.airbnb.com/reservation/change?code=3DHMJWARSKH=\r\nK&amp;eal_exp=3D1524296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08=\r\nd5d34e38ee352b97ff849b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D5&amp;ema=\r\nil=3Dtrue&amp;euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\"
+        class=3D\"btn-sec=\r\nondary btn-lg\" style=3D\"font-family:'Circular', Helvetica,
+        Arial, sans-seri=\r\nf;font-weight:normal;margin:0;text-align:left;line-height:1.3;color:#2199e8=\r\n;text-decoration:none;border:2px
+        solid #dbdbdb;-webkit-border-radius:4px;bo=\r\nrder-radius:4px;padding:19px
+        24px 19px 24px;display:block;width:auto !impor=\r\ntant\">\r\n        <p class=3D\"text-center\"
+        style=3D'font-weight:normal;padding:0;marg=\r\nin:0;text-align:center;color:#484848;font-family:\"Circular\",
+        \"Helvetica\", H=\r\nelvetica, Arial, sans-serif;font-size:24px;line-height:32px;margin-bottom:0=\r\npx
+        !important'>\r\n          Change reservation\r\n        </p>\r\n      </a>\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-top:24px;padding-bottom:24px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <th class=3D\"small-10 large-10 columns first\" style=3D\"font-size:16px;tex=\r\nt-align:left;line-height:1.3;font-family:'Circular',
+        Helvetica, Arial, sans=\r\n-serif;font-weight:normal;padding:0;color:#0a0a0a;padding-right:8px;margin:=\r\n0
+        auto;padding-bottom:16px;width:467.33333px;padding-left:16px\">\r\n    <p
+        class=3D\"body-text-lg heavy row-pad-bot-1\" style=3D'padding:0;margin=\r\n:0;text-align:left;font-size:24px;font-weight:700;font-family:\"Circular\",
+        \"=\r\nHelvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;li=\r\nne-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n      Your host is here to help\r\n
+        \   </p>\r\n    <p class=3D\"body-text light row-pad-bot-4\" style=3D'padding:0;margin:0;=\r\ntext-align:left;padding-bottom:32px;font-weight:300;font-family:\"Circular\",=\r\n
+        \"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;=\r\nline-height:1.4;font-size:18px;margin-bottom:0px
+        !important'>\r\n      Reach out to Mark with any questions you may have about
+        your stay.\r\n    </p>\r\n    <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;padding:=\r\n0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, sa=\r\nns-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;mar=\r\ngin-bottom:0px
+        !important'>\r\n      <span>\r\n        <a href=3D\"https://www.airbnb.com/messaging/qt_for_reservation/HMJW=\r\nARSKHK?eal_exp=3D1524296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f0=\r\n8d5d34e38ee352b97ff849b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D7&amp;eu=\r\nid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\"
+        class=3D\"color-rausch light\" sty=\r\nle=3D\"font-family:'Circular', Helvetica,
+        Arial, sans-serif;padding:0;margin=\r\n:0;text-align:left;line-height:1.3;text-decoration:none;font-weight:300;col=\r\nor:#ff5a5f
+        !important\">\r\n          Message Host\r\n        </a>\r\n      </span>\r\n
+        \     <span class=3D\"dot\" style=3D\"font-size:8px;vertical-align:middle;padd=\r\ning-left:8px;padding-right:8px\">\r\n
+        \       <span class=3D\"color-rausch\" style=3D\"color:#ff5a5f !important\">\r\n
+        \          =E2=80=A2=20\r\n        </span>\r\n      </span>\r\n      <span>\r\n
+        \       <a href=3D\"tel:+1%20(805)%20208-0018\" class=3D\"color-rausch light\"
+        =\r\nstyle=3D\"font-family:'Circular', Helvetica, Arial, sans-serif;padding:0;mar=\r\ngin:0;text-align:left;line-height:1.3;text-decoration:none;font-weight:300;=\r\ncolor:#ff5a5f
+        !important\">\r\n          +1 (805) 208-0018\r\n        </a>\r\n      </span>\r\n
+        \   </p>\r\n  </th>\r\n  <th class=3D\"small-2 large-2 columns last\" style=3D\"font-size:16px;text-a=\r\nlign:left;color:#0a0a0a;font-family:'Circular',
+        Helvetica, Arial, sans-seri=\r\nf;font-weight:normal;padding:0;line-height:1.3;width:80.66667px;padding-lef=\r\nt:16px;margin:0
+        auto;padding-bottom:16px;padding-right:16px\">\r\n    <a href=3D\"https://www.airbnb.com/users/show/160592330?eal_exp=3D152429=\r\n6707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc0228f08d5d34e38ee352b97ff849b=\r\n3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D6&amp;euid=3Ddc7226ac-9d3c-0862=\r\n-7da6-51b91dc3a688\"
+        style=3D\"font-family:'Circular', Helvetica, Arial, sans=\r\n-serif;font-weight:normal;padding:0;margin:0;text-align:left;line-height:1.=\r\n3;color:#2199e8;text-decoration:none\">\r\n
+        \     <img src=3D\"https://a0.muscache.com/im/pictures/user/787bac77-0dc0-48=\r\n68-8aee-4e1e93c7ca11.jpg?aki_policy=3Dprofile_x_medium\"
+        class=3D\"profile-im=\r\ng\" style=3D\"display:block;outline:none;text-decoration:none;-ms-interpolati=\r\non-mode:bicubic;width:auto;clear:both;border:none;max-width:77px;border-rad=\r\nius:50%;max-height:77px\">\r\n<img
+        alt=3D\"\" class=3D\"width-77 row-pad-top-2\" src=3D\"https://a1.muscache.c=\r\nom/airbnb/rookery/dls/5.0_stars-8b3a9b9fe0d1aa014b1f97859cd599b1.png\"
+        style=\r\n=3D\"display:block;outline:none;text-decoration:none;-ms-interpolation-mode:=\r\nbicubic;clear:both;border:none;width:77px;padding-top:16px;max-width:77px\">=\r\n
+        \   </a>\r\n  </th>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:24px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"partial-divider\" style=3D\"max-width:580px;clear:both;bor=\r\nder-top:0;border-bottom:1px
+        solid #cacaca;border-left:0;margin:20px auto;bo=\r\nrder-right:0;background-color:#dbdbdb;height:1px;border:none;width:50px;mar=\r\ngin-top:0;margin-bottom:0;float:left\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:24px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <p class=3D\"body-text-lg heavy row-pad-bot-1\" style=3D'padding:0;marg=\r\nin:0;text-align:left;font-size:24px;font-weight:700;font-family:\"Circular\",=\r\n
+        \"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;=\r\nline-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n        Know what to expect\r\n
+        \     </p>\r\n      <p class=3D\"body-text light row-pad-bot-4\" style=3D'padding:0;margin:=\r\n0;text-align:left;padding-bottom:32px;font-weight:300;font-family:\"Circular=\r\n\",
+        \"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:norma=\r\nl;line-height:1.4;font-size:18px;margin-bottom:0px
+        !important'>\r\n        Make sure to review the house rules and amenities.\r\n
+        \     </p>\r\n      <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;paddin=\r\ng:0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, =\r\nsans-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;m=\r\nargin-bottom:0px
+        !important'>\r\n        <a href=3D\"https://www.airbnb.com/reservation/itinerary?code=3DHMJW=\r\nARSKHK&amp;eal_exp=3D1524296707&amp;eal_sig=3D4b1decca7a92449a01e37406cfc02=\r\n28f08d5d34e38ee352b97ff849b3e0e278f&amp;eal_uid=3D36511193&amp;eluid=3D8&am=\r\np;euid=3Ddc7226ac-9d3c-0862-7da6-51b91dc3a688\"
+        class=3D\"color-rausch light\"=\r\n style=3D\"font-family:'Circular', Helvetica,
+        Arial, sans-serif;padding:0;ma=\r\nrgin:0;text-align:left;line-height:1.3;text-decoration:none;font-weight:300=\r\n;color:#ff5a5f
+        !important\">\r\n          View House Rules\r\n        </a>\r\n      </p>\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-bottom:24px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <hr class=3D\"partial-divider\" style=3D\"max-width:580px;clear:both;bor=\r\nder-top:0;border-bottom:1px
+        solid #cacaca;border-left:0;margin:20px auto;bo=\r\nrder-right:0;background-color:#dbdbdb;height:1px;border:none;width:50px;mar=\r\ngin-top:0;margin-bottom:0;float:left\">\r\n
+        \   </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div>\r\n<table class=3D\"row\"
+        style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12\" style=3D\"font-size:1=\r\n6px;padding:0;text-align:left;color:#0a0a0a;font-family:'Circular',
+        Helveti=\r\nca, Arial, sans-serif;font-weight:normal;line-height:1.3;margin:0
+        auto;padd=\r\ning-bottom:16px;width:564px;padding-left:16px;padding-right:16px\">\r\n
+        \     <p class=3D\"body-text-lg heavy row-pad-bot-1\" style=3D'padding:0;marg=\r\nin:0;text-align:left;font-size:24px;font-weight:700;font-family:\"Circular\",=\r\n
+        \"Helvetica\", Helvetica, Arial, sans-serif;color:#484848;word-break:normal;=\r\nline-height:1.2;padding-bottom:8px
+        !important;margin-bottom:0px !important'>\r\n        Customer support\r\n
+        \     </p>\r\n      <p class=3D\"body-text light\" style=3D'margin:0;text-align:left;paddin=\r\ng:0;font-weight:300;font-family:\"Circular\",
+        \"Helvetica\", Helvetica, Arial, =\r\nsans-serif;color:#484848;word-break:normal;line-height:1.4;font-size:18px;m=\r\nargin-bottom:0px
+        !important'>\r\n        <span>\r\n          <a href=3D\"https://www.airbnb.com/help?eal_exp=3D1524296708&amp;e=\r\nal_sig=3Dfa66ed86d13c4c2229b9c9c5cfbc02dcfa0fa89890920b5ef7497c6eb0494cd1&a=\r\nmp;eal_uid=3D36511193&amp;eluid=3D14&amp;euid=3Ddc7226ac-9d3c-0862-7da6-51b=\r\n91dc3a688\"
+        class=3D\"color-rausch light\" style=3D\"font-family:'Circular', He=\r\nlvetica,
+        Arial, sans-serif;padding:0;margin:0;text-align:left;line-height:1=\r\n.3;text-decoration:none;font-weight:300;color:#ff5a5f
+        !important\">\r\n            Visit Help Center\r\n          </a>\r\n        </span>\r\n
+        \       <span class=3D\"dot\" style=3D\"font-size:8px;vertical-align:middle;pa=\r\ndding-left:8px;padding-right:8px\">\r\n
+        \         <span class=3D\"color-rausch\" style=3D\"color:#ff5a5f !important\">\r\n
+        \            =E2=80=A2=20\r\n          </span>\r\n        </span>\r\n        <span>\r\n
+        \         <a href=3D\"https://www.airbnb.com/help/contact_us?eal_exp=3D15242=\r\n96708&amp;eal_sig=3Dfa66ed86d13c4c2229b9c9c5cfbc02dcfa0fa89890920b5ef7497c6=\r\neb0494cd1&amp;eal_uid=3D36511193&amp;eluid=3D15&amp;euid=3Ddc7226ac-9d3c-08=\r\n62-7da6-51b91dc3a688\"
+        class=3D\"color-rausch light\" style=3D\"font-family:'Ci=\r\nrcular', Helvetica,
+        Arial, sans-serif;padding:0;margin:0;text-align:left;li=\r\nne-height:1.3;text-decoration:none;font-weight:300;color:#ff5a5f
+        !important=\r\n\">\r\n            Contact Airbnb\r\n          </a>\r\n        </span>\r\n
+        \     </p>\r\n    </th>\r\n  </tr>\r\n</table>\r\n</div>\r\n<div style=3D\"padding-top:56px\">\r\n<table
+        class=3D\"row\" style=3D\"border-spacing:0;border-collapse:collapse;tex=\r\nt-align:left;vertical-align:top;padding:0;width:100%;position:relative;disp=\r\nlay:table\">\r\n
+        \ <tr class=3D\"\" style=3D\"padding:0;vertical-align:top;text-align:left\">\r\n
+        \   <th class=3D\"columns first large-12 last small-12 standard-footer-paddi=\r\nng\"
+        style=3D\"font-size:16px;text-align:left;line-height:1.3;color:#0a0a0a;f=\r\nont-family:'Circular',
+        Helvetica, Arial, sans-serif;font-weight:normal;padd=\r\ning:0;margin:0 auto;padding-bottom:16px;width:564px;padding-left:16px;paddi=\r\nng-right:16px\">\r\n
+        \     <hr class=3D\"standard-footer-hr\" style=3D\"clear:both;max-width:580px;=\r\nborder-right:0;border-bottom:1px
+        solid #cacaca;border-left:0;border-top:0;b=\r\nackground-color:#dbdbdb;height:2px;width:100%;border:none;margin:auto\">\r\n
+        \     <div class=3D\"row-pad-bot-4\" style=3D\"padding-bottom:32px\">\r\n
+        \     </div>\r\n      <p class=3D\"standard-footer-text center \" style=3D'font-family:\"Circu=\r\nlar\",
+        \"Helvetica\", Helvetica, Arial, sans-serif;padding:0;margin:0;text-ali=\r\ngn:left;margin-bottom:10px;color:#9ca299;font-size:14px;text-shadow:0
+        1px #=\r\nfff;font-weight:300;line-height:1.4'>\r\n        Sent with =E2=99=A5
+        from Airbnb\r\n      </p>\r\n      <p class=3D\"standard-footer-text \" style=3D'font-family:\"Circular\",
+        \"=\r\nHelvetica\", Helvetica, Arial, sans-serif;padding:0;margin:0;text-align:left=\r\n;margin-bottom:10px;color:#9ca299;font-size:14px;text-shadow:0
+        1px #fff;fon=\r\nt-weight:300;line-height:1.4'>\r\n=E2=80=8CA=E2=80=8Ci=E2=80=8Cr=E2=80=8Cb=E2=80=8Cn=E2=80=8Cb=E2=80=8C,=E2=\r\n=80=8C
+        =E2=80=8CI=E2=80=8Cn=E2=80=8Cc=E2=80=8C.=E2=80=8C,=E2=80=8C =E2=80=\r\n=8C8=E2=80=8C8=E2=80=8C8=E2=80=8C
+        =E2=80=8CB=E2=80=8Cr=E2=80=8Ca=E2=80=8Cn=\r\n=E2=80=8Cn=E2=80=8Ca=E2=80=8Cn=E2=80=8C
+        =E2=80=8CS=E2=80=8Ct=E2=80=8C,=E2=\r\n=80=8C =E2=80=8CS=E2=80=8Ca=E2=80=8Cn=E2=80=8C
+        =E2=80=8CF=E2=80=8Cr=E2=80=\r\n=8Ca=E2=80=8Cn=E2=80=8Cc=E2=80=8Ci=E2=80=8Cs=E2=80=8Cc=E2=80=8Co=E2=80=8C,=\r\n=E2=80=8C
+        =E2=80=8CC=E2=80=8CA=E2=80=8C =E2=80=8C9=E2=80=8C4=E2=80=8C1=E2=\r\n=80=8C0=E2=80=8C3=E2=80=8C
+        \     </p>\r\n      <p class=3D\"standard-footer-text \" style=3D'font-family:\"Circular\",
+        \"=\r\nHelvetica\", Helvetica, Arial, sans-serif;padding:0;margin:0;text-align:left=\r\n;margin-bottom:10px;color:#9ca299;font-size:14px;text-shadow:0
+        1px #fff;fon=\r\nt-weight:300;line-height:1.4'>\r\n        <a class=3D\"muted\"
+        href=3D\"https://www.airbnb.com/invite?eal_exp=3D=\r\n1524296708&amp;eal_sig=3Dfa66ed86d13c4c2229b9c9c5cfbc02dcfa0fa89890920b5ef7=\r\n497c6eb0494cd1&amp;eal_uid=3D36511193&amp;eluid=3D16&amp;euid=3Ddc7226ac-9d=\r\n3c-0862-7da6-51b91dc3a688&amp;r=3D46\"
+        style=3D\"font-weight:normal;padding:0=\r\n;margin:0;text-align:left;line-height:1.3;font-family:'Circular',
+        Helvetica=\r\n, Arial, sans-serif;color:#9ca299;text-decoration:underline\">\r\n
+        \         Earn travel credit\r\n        </a>\r\n      </p>\r\n      <p class=3D\"standard-footer-text
+        \" style=3D'font-family:\"Circular\", \"=\r\nHelvetica\", Helvetica, Arial,
+        sans-serif;padding:0;margin:0;text-align:left=\r\n;margin-bottom:10px;color:#9ca299;font-size:14px;text-shadow:0
+        1px #fff;fon=\r\nt-weight:300;line-height:1.4'>\r\n      </p>\r\n    </th>\r\n
+        \ </tr>\r\n</table>\r\n</div>\r\n                </td>\r\n              </tr>\r\n
+        \           </table>\r\n          </center>\r\n        </td>\r\n      </tr>\r\n
+        \   </table>\r\n=20=20\r\n\r\n<img src=3D\"http://email.airbnb.com/wf/open?upn=3D0Fm9gBlqxHh7kAH0w6-2FG2Hk=\r\nQEoGfPNkbn6bjspR3MEruEBa8eZK0KYFqDtYE6phYVfSzbR4wQkRQ-2FTHGP-2BuPQBQlnYaBKy=\r\nxgGDn6tf7-2FnkDJ4Al71lLButOg-2Bvh8BTWIN786Tf2q-2B73XU6j43HQXbYh-2Bhv7oh4WUQ=\r\nOOKdm3fqwUq-2Fk6Ij4jYRVVAUadLG9TH46MYl2n7-2Fvv6vLCyNPjOGYjYKAApiaGs-2BQO132=\r\nHEhtFaXa-2FXm9-2BMR88v4Dst6B-2FMKy9yjypVPvZiM-2BG4Plt6nuR2AzoLUowM-2BwQd0lt=\r\nRGtbS94J-2B5fpCnRNArLK9okmMkf7FWEw04Qkm9UbIWqY3pSTvHhomUKp7poZUaiHX2g5l1zT-=\r\n2FX6Cxwr-2FVBDnFd-2BOPZizvqzsGTCRXmp2r2I88vhEmE1e28crnVA6U1KhH7Lu5T-2BIGBxR=\r\nukzDktjhP-2F0YV4K9gp-2BmO-2FhNXtUzR9gFYerOMBu5Mo2ZPz72lMrEnmCR89RT-2Bhih3CN=\r\nKCkzmLT6x8rfrskHoa0nd-2FiCP4R0TWHaBIQVIMfAiQ1aWMR19RiYdtpcmsTB1PSQZVi0ujAH7=\r\nYMKG8s8t3Z2i2KL5I5xfXt1gC1ma9x6ePtrcHKFIiiWM-3D\"
+        alt=3D\"\" width=3D\"1\" heigh=\r\nt=3D\"1\" border=3D\"0\" style=3D\"height:1px
+        !important;width:1px !important;bo=\r\nrder-width:0 !important;margin-top:0
+        !important;margin-bottom:0 !important;=\r\nmargin-right:0 !important;margin-left:0
+        !important;padding-top:0 !important=\r\n;padding-bottom:0 !important;padding-right:0
+        !important;padding-left:0 !imp=\r\nortant;\"/>\r\n</body>\r\n</html>\r\n\r\n--185f696327881a0d9634f73478c67ae522192212492b1a53d7e1f8ea4617--\r\n"
+  behavior: :return

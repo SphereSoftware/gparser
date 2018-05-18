@@ -1,5 +1,5 @@
 ---
-Net::IMAP-authenticate-3bb7fb5ecd907c009df0ae78c92a585e: !ruby/object:Camcorder::Recording
+Net::IMAP-authenticate-e3934f516a057ec880d025287efa0e14: !ruby/object:Camcorder::Recording
   value: !ruby/struct:Net::IMAP::TaggedResponse
     tag: RUBY0001
     name: OK

@@ -26,13 +26,55 @@ you configure your repository first. In order to do it you should add your
 $ rake
 ```
 
+as result you will have something like this
+
+```
+We are going to parse your email feed, plz be patient that can take a minute or two  👷‍
+[
+  {
+    "gparser::airbnb": [
+      {
+        "check_in": "Friday, Mar 23, 2015",
+        "check_out": "Friday, Mar 30, 2015",
+        "address": "3114 West 1124th unit, Inglewood, CA 90303, United States",
+        "amount": "$280.65"
+      },
+      {
+        "check_in": "Friday, Mar 30, 2015",
+        "check_out": "Thursday, Apr 05, 2015",
+        "address": "7415 Chrome Street, Las Vegas, NV 7115, United States",
+        "amount": "446.80"
+      },
+      {
+        "check_in": "Friday, Mar 23, 2016",
+        "check_out": "Friday, Mar 30, 2016",
+        "address": "3114 West 1124th Place Front unit, Inglewood, CA 90303, United States",
+        "amount": "$780.65"
+      },
+      {
+        "check_in": "Friday, Mar 23, 2016",
+        "check_out": "Friday, Mar 30, 2016",
+        "address": "3514 West 1124th Place Front unit, Inglewood, CA 90303, United States",
+        "amount": "$180.65"
+      },
+      {
+        "check_in": "Friday, Mar 30, 2017",
+        "check_out": "Thursday, Apr 05, 2017",
+        "address": "7415 Hill Street, Las Vegas, NV 7115, United States",
+        "amount": "$386.80"
+      }
+    ]
+  }
+]
+```
+
 ### Configuration
 
 Make sure you change `.env` file, it should looks like
 
 ```sh
 GKEY=ya29.Glu_BUb8cazF7SDuXxonMvT3LG7edhTG9DCKmjY_vPllBwFPYi-z7vStI_RDDo4SmdxFpUe5TdEh
-EMAIL=shemerey@gmail.com
+EMAIL=some@gmail.com
 ```
 
 You will be able to generate temp token in google [oauthplayground](https://developers.google.com/oauthplayground/)

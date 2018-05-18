@@ -3,7 +3,9 @@ RSpec.describe Gparser::Airbnb do
     methods_with_side_effects :select
   end
 
-  let!(:connection) { Gparser::Feed.new(ENV['EMAIL'], ENV['GKEY']).connection }
+  let!(:gmail) { "shemerey@gmail.com" }
+  let!(:key) { "ya29.Glu_BXzR6XVYMDkAiyl_qJhASH7vw90FeSAi55-rhHMPXGTBZKYhP3qzXJe4OHu45Vcn4EFyeQc5PJ-8qmFSlvC0J_V42dC3i7xWDTAK9ky2rovuy1dwFSHedi0x" }
+  let!(:connection) { Gparser::Feed.new(gmail, key).connection }
 
   it "fetch emails" do
     expect(described_class.new(connection).emails).to_not be_empty
